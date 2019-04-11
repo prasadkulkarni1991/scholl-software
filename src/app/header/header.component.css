@@ -1,0 +1,92 @@
+/* css for horizontal header */
+
+/* 
+.nav-list {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.login-user {
+    float: right;
+    width: 15%;
+}
+
+.nav-bar {
+    background: #6C4;
+    padding: 5px 10px;
+    position: relative;
+}
+
+img {
+    float: left;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+li {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+ul li:hover {
+    background: #ffffff;
+}
+.no-margin {
+    margin: 0;
+} */
+
+
+/*=============== css for sideNav ===================*/
+
+.login-user {
+    margin-bottom: 1rem;
+}
+
+.login-user  p{
+    color: #fff;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+}
+
+
+.main-content {
+    display: inline-block;
+}
+.content {
+    margin-left: 160px;
+    padding: 0 10px; 
+}
+
+.sidenav {
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 0px 6px 10px;
+    background-color: #111;
+}
+
+.sidenav a {
+    display: block;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.no-margin {
+    margin: 0;
+}
