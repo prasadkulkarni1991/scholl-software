@@ -4,7 +4,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NgModule } from '@angular/core';
-import { StudentComponent } from './student/student.component';
 
 export const route: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -30,20 +29,14 @@ export const route: Routes = [
           {
             path: 'student',
             loadChildren: './student/student.module#StudentModule'
+          },
+          {
+            path: 'employee',
+            loadChildren: './employee/employee.module#EmployeeModule'
           }
       ]
     },
-    // {
-    // //   path: 'student',
-    // //   component: StudentComponent,
-    // //   children: [
-    // //     {
-    //         path: 'student',
-    //         // canActivate: [BetaUserGuard],
-    //         loadChildren: './student/student.module#StudentModule'
-    //     //   },
-    // //   ]
-    // }
+
   ];
 
   @NgModule({

@@ -4,16 +4,21 @@ import { StudentRoutingModule } from './student.routing-module';
 import { Routes, RouterModule } from '@angular/router';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AddStudentComponent } from './add-student/addStudent.component';
+import { StudentBasicDetailsComponent } from './add-student/basic-details/basic-details.component';
+import { CommonModule } from '@angular/common';
+import { StudentEducationDetailsComponent } from './add-student/education-details/education-details.component';
 
 @NgModule({
     imports: [
-        StudentRoutingModule
+        StudentRoutingModule,
+        CommonModule
     ],
-    exports: [StudentComponent],
     declarations: [
         StudentComponent,
         StudentListComponent,
-        AddStudentComponent
+        AddStudentComponent,
+        StudentBasicDetailsComponent,
+        StudentEducationDetailsComponent
     ],
 })
 

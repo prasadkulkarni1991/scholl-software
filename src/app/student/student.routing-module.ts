@@ -1,8 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { StudentComponent } from './student.component';
 import { NgModule } from '@angular/core';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AddStudentComponent } from './add-student/addStudent.component';
+import { StudentBasicDetailsComponent } from './add-student/basic-details/basic-details.component';
+import { StudentEducationDetailsComponent } from './add-student/education-details/education-details.component';
 
 export const routes: Routes = [
     {
@@ -16,7 +17,12 @@ export const routes: Routes = [
     },
     {
         path: 'addStudent',
-        component: AddStudentComponent
+        component: AddStudentComponent,
+        children: [
+            {path : '', redirectTo: 'basicDetails', pathMatch: 'full'},
+            {path : 'basicDetails', component: StudentBasicDetailsComponent},
+            {path : 'educationDetails', component: StudentEducationDetailsComponent}
+        ]
     },
 ];
 
