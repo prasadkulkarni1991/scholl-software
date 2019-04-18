@@ -36,7 +36,6 @@ export const route: Routes = [
           }
       ]
     },
-
   ];
 
   @NgModule({
