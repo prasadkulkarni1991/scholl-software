@@ -6,16 +6,23 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NgModule } from '@angular/core';
 
 export const route: Routes = [
-    {path: '', redirectTo: '/login', pathMatch: 'full'},
-    {path: 'login', component: LoginComponent},
-    {
-      path: 'dashboard',
-      component: DashboardComponent,
-      children: [
-          {
-            path: '',
-            redirectTo: 'home',
-            pathMatch: 'full'
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
 
           },
           {
@@ -46,10 +53,11 @@ export const route: Routes = [
     },
   ];
 
-  @NgModule({
-      imports: [RouterModule.forRoot(route)],
-      exports: [RouterModule]
-  })
 
-  export class AppRoutingModule { }
+@NgModule({
+  imports: [RouterModule.forRoot(route)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
 
