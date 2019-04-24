@@ -24,27 +24,34 @@ export const route: Routes = [
         redirectTo: 'home',
         pathMatch: 'full'
 
-      },
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: 'about-us',
-        component: AboutUsComponent
-      },
-      {
-        path: 'student',
-        loadChildren: './student/student.module#StudentModule'
-      },
-      {
-        path: 'employee',
-        loadChildren: './employee/employee.module#EmployeeModule'
-      }
-    ]
-  },
-
-];
+          },
+          {
+            path: 'home',
+            component: HomeComponent
+          },
+          {
+            path: 'about-us',
+            component: AboutUsComponent
+          },
+          {
+            path: 'student',
+            loadChildren: './student/student.module#StudentModule'
+          },
+          {
+            path: 'employee',
+            loadChildren: './employee/employee.module#EmployeeModule'
+          },
+          {
+            path: 'preAdmission',
+            loadChildren: './pre-admission/preAdmission.module#PreAdmissionModule'
+          },
+          {
+            path: 'exam',
+            loadChildren: './exam/exam.module#ExamModule'
+          }
+      ]
+    },
+  ];
 
 
 @NgModule({

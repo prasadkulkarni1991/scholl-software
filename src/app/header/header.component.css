@@ -82,7 +82,7 @@ img {
 
 .sidenav a {
     display: block;
-    padding: 6px 8px 6px 16px;
+    padding: 16px 8px 16px 8px;
     text-decoration: none;
     color: #fff;
 }
