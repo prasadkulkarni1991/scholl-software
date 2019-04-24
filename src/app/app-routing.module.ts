@@ -37,6 +37,10 @@ export const route: Routes = [
           {
             path: 'preAdmission',
             loadChildren: './pre-admission/preAdmission.module#PreAdmissionModule'
+          },
+          {
+            path: 'exam',
+            loadChildren: './exam/exam.module#ExamModule'
           }
       ]
     },
