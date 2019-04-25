@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../http/login.service';
 
 @Component ({
     selector: 'app-header',
@@ -7,16 +8,18 @@ import { Router } from '@angular/router';
     styleUrls: ['header.component.css']
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+    loggedinDetails;
     constructor(
-        private router: Router
-    ) {
+        private router: Router,
+        private service: LoginService
+    ) { }
 
+    ngOnInit() {
+      this.loggedinDetails = this.service.getUserDetails();
     }
 
-    showExamMenu = false;
-    ShowExam() {
-        this.showExamMenu = true;
-        this.router.navigate(['/exam']);
+    logout() {
+        this.router.navigate(['/login']);
     }
 }
