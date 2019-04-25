@@ -21,6 +21,7 @@ export class LoginComponent {
             role: f.value.role
         };
         this.loginDetails = this.service.userLogin(data);
+        // console.log('this.loginDetails', localStorage.getItem('data'));
         this.router.navigate(['/dashboard']);
 
     }

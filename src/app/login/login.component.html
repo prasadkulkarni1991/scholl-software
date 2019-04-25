@@ -11,7 +11,7 @@
         </div>
         <div>
             <label>Role</label>
-            <select name="role" [(ngModel)]="role" #ctrl="ngModel">
+            <select (change)="roleSelected($event)"  name="role" [(ngModel)]="role" #ctrl="ngModel">
                 <option value="student">Student</option>
                 <option value="admin">Admin</option>
             </select>

@@ -3,10 +3,12 @@ import { Injectable } from '@angular/core';
 export class LoginService {
     userData: any;
     userLogin(data) {
-            return this.userData = {
-                role: data.role,
-                name: data.userName
-            };
+        this.userData = {
+            role: data.role,
+            name: data.userName
+        };
+        localStorage.setItem('data', JSON.stringify(this.userData));
+        return localStorage.getItem('data');
     }
 
     getUserDetails() {

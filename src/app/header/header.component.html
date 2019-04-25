@@ -2,14 +2,14 @@
     <div class="sidenav">
         <div class="login-user">
             <img src="/assets/img/prasad.jpg" width="30px">
-            <p class="no-margin">{{loggedinDetails.name ? loggedinDetails.name: 'Prasad'}}</p>
+            <p class="no-margin">{{loggedInDetails.name}}</p>
             <p class="no-margin">9766256478</p>
             <button type="button" class="logout" (click)="logout()">Logout</button>
         </div>
         <a routerLink="home">
             Home
         </a>
-        
+
         <a routerLink="about-us">
             About Us
         </a>
@@ -20,14 +20,13 @@
             Pre-Admission
         </a>
         <a routerLink="employee">
-            Employee  
+            Employee
         </a>
         <a>
-           <span >Exam</span>
-            <ul>
-                <li  routerLink="exam/exam">Exam List</li>
-                <li routerLink="exam/exam-grade">Exam Grade</li>
-                <li routerLink="manage-marks">Manage Marks</li>
+            <span (click)="showSubMenu()" class="">Exam</span>
+            <ul *ngIf="subMenu">
+                <li> <a routerLink="exam/exam">Exam List </a></li>
+                <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
             </ul>
         </a>
     </div>

@@ -73,6 +73,7 @@ img {
 
 .sidenav {
     width: 160px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,6 +86,7 @@ img {
     padding: 16px 8px 16px 8px;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .no-margin {
