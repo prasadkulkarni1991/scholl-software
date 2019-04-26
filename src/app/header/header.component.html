@@ -7,28 +7,28 @@
             <button type="button" class="logout" (click)="logout()">Logout</button>
         </div>
         <a routerLink="home">
-            Home
+            <i class="fa fa-fw fa-home right-padding"></i> Home
         </a>
 
         <a routerLink="about-us">
-            About Us
+            <i class="fa fa-fw fa-info-circle right-padding"></i> About Us
         </a>
         <a routerLink="student">
-            Student
+            <i class="fa fa-fw fa-child right-padding"></i>Student
         </a>
         <a routerLink="preAdmission">
-            Pre-Admission
+            <i class="fa fa-fw fa-envelope right-padding"></i>Pre-Admission
         </a>
         <a routerLink="employee">
-            Employee
+            <i class="fa fa-fw fa-user right-padding"></i>Employee
         </a>
-        <a>
-            <span (click)="showSubMenu()" class="">Exam</span>
-            <ul *ngIf="subMenu">
-                <li> <a routerLink="exam/exam">Exam List </a></li>
-                <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
-            </ul>
+        <a (click)="showSubMenu()">
+            <span><i class="fa fa-fw fa-file-alt right-padding"></i>Exam</span>
         </a>
+        <ul *ngIf="subMenu">
+            <li> <a routerLink="exam/exam">Exam List </a></li>
+            <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
+        </ul>
     </div>
     <div class="content">
         <router-outlet></router-outlet>

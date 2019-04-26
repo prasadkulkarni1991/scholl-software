@@ -1,23 +1,23 @@
-<div id="login">
-    <form #f="ngForm" (ngSubmit)="login(f)" novalidate>
-        <div>
+<div id="login" class="well">
+    <form #f="ngForm" (ngSubmit)="login(f)" novalidate class="form-horizontal">
+        <div  class="form-group">
             <label>Username</label>
-            <input type="text" name="username" [(ngModel)]="username" #ctrl="ngModel">
+            <input type="text" class="form-control" name="username" [(ngModel)]="username" #ctrl="ngModel">
         </div>
 
-        <div>
+        <div  class="form-group">
             <label>Password</label>
-            <input type="password" name="password">
+            <input class="form-control" type="password" name="password">
         </div>
-        <div>
+        <div  class="form-group">
             <label>Role</label>
-            <select (change)="roleSelected($event)"  name="role" [(ngModel)]="role" #ctrl="ngModel">
+            <select class="form-control" (change)="roleSelected($event)"  name="role" [(ngModel)]="role" #ctrl="ngModel">
                 <option value="student">Student</option>
                 <option value="admin">Admin</option>
             </select>
         </div>
-        <div>
-            <button type="submit">Login</button>
+        <div  class="form-group">
+            <button type="submit"  class="btn btn-primary center-block" >Login</button>
         </div>
     </form>
     <ng-content></ng-content>

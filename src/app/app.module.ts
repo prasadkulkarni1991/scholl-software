@@ -11,8 +11,14 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginService } from './http/login.service';
 import { AuthGuard } from './guard/auth-guard.service';
+import { FusionChartsModule } from 'angular-fusioncharts';
+import * as FusionCharts from 'fusioncharts';
 
+// Load FusionCharts Individual Charts
+import * as Charts from 'fusioncharts/fusioncharts.charts';
 
+// Use fcRoot function to inject FusionCharts library, and the modules you want to use
+FusionChartsModule.fcRoot(FusionCharts, Charts);
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +32,7 @@ import { AuthGuard } from './guard/auth-guard.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    FusionChartsModule,
   ],
   providers: [
     LoginService,

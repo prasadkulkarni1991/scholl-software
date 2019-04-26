@@ -81,6 +81,15 @@ img {
     background-color: #111;
 }
 
+.right-padding {
+    padding-right: 10px; 
+}
+.left-margin {
+    margin-left: 3.5rem
+}
+.svg-inline--fa.fa-fw {
+    width: 2.25em;
+}
 .sidenav a {
     display: block;
     padding: 16px 8px 16px 8px;
