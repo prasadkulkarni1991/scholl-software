@@ -46,7 +46,8 @@ ul li:hover {
 /*=============== css for sideNav ===================*/
 
 .login-user {
-    margin-bottom: 1rem;
+    float: right;
+    width: 147px;
 }
 
 .login-user  p{
@@ -65,10 +66,19 @@ img {
 
 
 .content {
-    margin-left: 160px;
-    padding: 0 10px; 
+        margin-left: 160px;
+    padding: 36px;
+    margin-top: 36px;
 }
 
+.horizontalNav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 0px 6px 10px;
+    background-color: #111;
+}
 .sidenav {
     width: 160px;
     height: 100%;

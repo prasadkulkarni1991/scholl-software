@@ -1,14 +1,15 @@
-<section>
-
-    <!-- -->
-
-    <nav>
-        <a [routerLink]="['/dashboard/student/addStudent/basicDetails']">Basic Details</a>
-        <a [routerLink]="['/dashboard/student/addStudent/educationDetails']">Education Details</a>
-
-
-    </nav>
-    <router-outlet>
-        <ng-content></ng-content>
-    </router-outlet>
+<section class="col-sm-12">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default ">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li [ngClass]="{'active': activeLink === 'basicDetails'}" (click)="checkActiveLink('basicDetails')"> <a [routerLink]="['/dashboard/student/addStudent/basicDetails']">Basic Details</a></li>
+                    <li [ngClass]="{'active': activeLink === 'educationDetails'}" (click)="checkActiveLink('educationDetails')"> <a [routerLink]="['/dashboard/student/addStudent/educationDetails']">Education Details</a></li>
+                </ul>
+            </div>
+        </nav>
+        <router-outlet>
+            <ng-content></ng-content>
+        </router-outlet>
+    </div>
 </section>

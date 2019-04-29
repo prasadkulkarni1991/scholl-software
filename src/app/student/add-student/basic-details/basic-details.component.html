@@ -1,14 +1,72 @@
-    
-    <app-add-student>
-        <p>basic details</p>
-    </app-add-student>
+<div class="col-lg-12">
     <form class="form-horizontal">
-            <div class="form-group">
-                <label class="form-label"> First Name</label>
-                <input type="text" class="form-control" name="firstName">
+
+        <div class="col-sm-12 row">
+
+            <div class="form-group"> 
+                <label class="col-form-label col-sm-2"> First Name</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="firstName">
+                </div>
+                <label class="col-form-label col-sm-2">Last name</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="lastName">
+                </div>
             </div>
+        </div>
+
+        <div class="col-sm-12 row">
             <div class="form-group">
-                <label class="form-label">Last name</label>
-                <input type="text" class="form-control" name="lastName">
+                <label class="col-form-label col-sm-2"> Contact Number</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="contact">
+                </div>
             </div>
-        </form>
+        </div>
+        <div class="col-sm-12 row">
+            <div class="form-group">
+                <label class="col-form-label col-sm-2"> Degree program</label>
+                <div class="col-sm-4">
+                    <select class="form-control" name="degreeProgram"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 row">
+            <div class="form-group">
+                <label class="col-form-label col-sm-2"> Email</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" name="email">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 row">
+            <div class="form-group">
+                <label class="col-form-label col-sm-2"> Present Address</label>
+                <div class="col-sm-4">
+                    <div>
+                        <div>
+                            <input type="text" class="form-control" name="streat_address">
+                            <label class="col-form-label"> Streat Address</label>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="streat_address">
+                            <label class="col-form-label"> Streat Address Line 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-6 no-padding ">
+                            <input type="text" class="form-control" name="streat_address">
+                            <label class="col-form-label">City</label>
+                        </div>
+                        <div class="col-sm-6 no-padding">
+                            <input type="text" class="form-control" name="streat_address">
+                            <label class="col-form-label">State</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

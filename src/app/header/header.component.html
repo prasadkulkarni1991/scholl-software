@@ -1,35 +1,32 @@
 <div class="main-content">
-    <div class="sidenav">
-        <div class="login-user">
-            <img src="/assets/img/prasad.jpg" width="30px">
-            <p class="no-margin">{{loggedInDetails.name}}</p>
-            <p class="no-margin">9766256478</p>
-            <button type="button" class="logout" (click)="logout()">Logout</button>
+        
+        <div class="horizontalNav">
+            <div class="login-user">
+                <img src="/assets/img/prasad.jpg" width="30px">
+                <p class="no-margin">{{loggedInDetails.name}}</p>
+                <p class="no-margin">9766256478</p>
+                <button type="button" class="logout" (click)="logout()">Logout</button>
+            </div>
         </div>
-        <a routerLink="home">
-            <i class="fa fa-fw fa-home right-padding"></i> Home
-        </a>
+        <div class="sidenav">
 
-        <a routerLink="about-us">
-            <i class="fa fa-fw fa-info-circle right-padding"></i> About Us
-        </a>
-        <a routerLink="student">
-            <i class="fa fa-fw fa-child right-padding"></i>Student
-        </a>
-        <a routerLink="preAdmission">
-            <i class="fa fa-fw fa-envelope right-padding"></i>Pre-Admission
-        </a>
-        <a routerLink="employee">
-            <i class="fa fa-fw fa-user right-padding"></i>Employee
-        </a>
-        <a (click)="showSubMenu()">
-            <span><i class="fa fa-fw fa-file-alt right-padding"></i>Exam</span>
-        </a>
-        <ul *ngIf="subMenu">
-            <li> <a routerLink="exam/exam">Exam List </a></li>
-            <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
-        </ul>
-    </div>
+                <div *ngFor="let item of sideNavData">
+                    <a routerLink={{item.name}}>
+                        <i class={{item.iconName}}></i>{{item.name| titlecase}}
+                    </a>
+                </div>
+    
+                <a (click)="showSubMenu()">
+                    <span><i class="fa fa-fw fa-file-alt right-padding"></i>Exam</span>
+                </a>
+                <ul *ngIf="subMenu">
+                    <li> <a routerLink="exam/exam">Exam List </a></li>
+                    <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
+                </ul>
+            </div>
+    
+
+
     <div class="content">
         <router-outlet></router-outlet>
     </div>
