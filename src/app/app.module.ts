@@ -16,6 +16,7 @@ import * as FusionCharts from 'fusioncharts';
 
 // Load FusionCharts Individual Charts
 import * as Charts from 'fusioncharts/fusioncharts.charts';
+import { HttpClientModule } from '@angular/common/http';
 
 // Use fcRoot function to inject FusionCharts library, and the modules you want to use
 FusionChartsModule.fcRoot(FusionCharts, Charts);
@@ -33,6 +34,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts);
     FormsModule,
     AppRoutingModule,
     FusionChartsModule,
+    HttpClientModule
   ],
   providers: [
     LoginService,

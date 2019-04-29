@@ -1,2 +1,29 @@
-<p>student-list.component.html</p>
-<button [routerLink]="['/dashboard/student/addStudent']">Add</button>
+
+<div class="table-responsive">
+<button [routerLink]="['/dashboard/student/addStudent']" class="pull-right btn btn-success">Add</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Company Name</th>
+                <th>Company Website</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+       <tbody>
+        <tr *ngFor="let student of studentList">
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.company.name}}</td>
+            <td>{{student.website}}</td>
+            <td>
+                <button class="btn btn-danger action-btn-group"><span><i class="fa fa-trash"></i></span></button>
+                <button class="btn btn-warning action-btn-group"><span><i class="fa fa-edit"></i></span></button>
+            </td>
+        </tr>
+       </tbody>
+    </table>
+</div>
+ 

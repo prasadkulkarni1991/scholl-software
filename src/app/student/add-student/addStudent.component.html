@@ -1,12 +1,14 @@
 <section>
 
     <!-- -->
-   <router-outlet>
-       <ng-content></ng-content>
-   </router-outlet>
 
-   <nav>
-    <a routerLink="basicDetails">Basic Details</a>
-    <a routerLink="educationDetails">Education Details</a>
-</nav>
+    <nav>
+        <a [routerLink]="['/dashboard/student/addStudent/basicDetails']">Basic Details</a>
+        <a [routerLink]="['/dashboard/student/addStudent/educationDetails']">Education Details</a>
+
+
+    </nav>
+    <router-outlet>
+        <ng-content></ng-content>
+    </router-outlet>
 </section>
