@@ -5,16 +5,14 @@ import { ExamGradeComponent } from './examGrade/examGrade.component';
 
 export const routes: Routes = [
 
-
+    { path: '', redirectTo: 'exam-list', pathMatch: 'full' },
     {
         path: 'exam',
         component: ExamComponent,
-        children: [
-            {path: '', redirectTo: 'exam-list', pathMatch: 'full'},
-            {path : 'exam-list', component: ExamComponent},
-            {path : 'exam-grade', component: ExamGradeComponent}
-        ]
     },
+    { path: 'exam-list', component: ExamComponent },
+
+    { path: 'exam-grade', component: ExamGradeComponent }
 ];
 
 @NgModule({

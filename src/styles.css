@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
 .div {
     width: 100%;
+}
+html,body {
+    background-color: #f4f8fa;
+    font-family:'Roboto, monospace'
+}
+
+.no-padding {
+    padding-left: 0
 }

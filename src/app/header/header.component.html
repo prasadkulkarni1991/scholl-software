@@ -1,34 +1,32 @@
 <div class="main-content">
-    <div class="sidenav">
-        <div class="login-user">
-            <img src="/assets/img/prasad.jpg" width="30px">
-            <p class="no-margin">Prasad Kulkarni</p>
-            <p class="no-margin">9766256478</p>
+        
+        <div class="horizontalNav">
+            <div class="login-user">
+                <img src="/assets/img/prasad.jpg" width="30px">
+                <p class="no-margin">{{loggedInDetails.name}}</p>
+                <p class="no-margin">9766256478</p>
+                <button type="button" class="logout" (click)="logout()">Logout</button>
+            </div>
         </div>
-        <a routerLink="home">
-            Home
-        </a>
-        <a routerLink="about-us">
-            About Us
-        </a>
-        <a routerLink="student">
-            Student
-        </a>
-        <a routerLink="preAdmission">
-            Pre-Admission
-        </a>
-        <a routerLink="employee">
-            Employee
-        </a>
-        <a>
-           <span >Exam</span>
-            <ul>
-                <li  routerLink="exam/exam">Exam List</li>
-                <li routerLink="exam/exam/exam-grade">Exam Grade</li>
-                <li routerLink="manage-marks">Manage Marks</li>
-            </ul>
-        </a>
-    </div>
+        <div class="sidenav">
+
+                <div *ngFor="let item of sideNavData">
+                    <a routerLink={{item.name}}>
+                        <i class={{item.iconName}}></i>{{item.name| titlecase}}
+                    </a>
+                </div>
+    
+                <a (click)="showSubMenu()">
+                    <span><i class="fa fa-fw fa-file-alt right-padding"></i>Exam</span>
+                </a>
+                <ul *ngIf="subMenu">
+                    <li> <a routerLink="exam/exam">Exam List </a></li>
+                    <li><a routerLink="exam/exam-grade">Exam Grade </a></li>
+                </ul>
+            </div>
+    
+
+
     <div class="content">
         <router-outlet></router-outlet>
     </div>

@@ -1,52 +1,7 @@
-/* css for horizontal header */
-
-/* 
-.nav-list {
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
 
 .login-user {
     float: right;
-    width: 15%;
-}
-
-.nav-bar {
-    background: #6C4;
-    padding: 5px 10px;
-    position: relative;
-}
-
-img {
-    float: left;
-    border-radius: 50%;
-    margin-right: 10%;
-}
-
-ul li {
-    list-style-type: none;
-    display: inline-block;
-}
-li {
-    text-align: center;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-ul li:hover {
-    background: #ffffff;
-}
-.no-margin {
-    margin: 0;
-} */
-
-
-/*=============== css for sideNav ===================*/
-
-.login-user {
-    margin-bottom: 1rem;
+    width: 147px;
 }
 
 .login-user  p{
@@ -63,16 +18,24 @@ img {
 }
 
 
-.main-content {
-    display: inline-block;
-}
+
 .content {
-    margin-left: 160px;
-    padding: 0 10px; 
+        margin-left: 160px;
+    padding: 36px;
+    margin-top: 36px;
 }
 
+.horizontalNav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 0px 6px 10px;
+    background-color: #111;
+}
 .sidenav {
     width: 160px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -80,11 +43,21 @@ img {
     background-color: #111;
 }
 
+.right-padding {
+    padding-right: 10px; 
+}
+.left-margin {
+    margin-left: 3.5rem
+}
+.svg-inline--fa.fa-fw {
+    width: 2.25em;
+}
 .sidenav a {
     display: block;
     padding: 16px 8px 16px 8px;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .no-margin {

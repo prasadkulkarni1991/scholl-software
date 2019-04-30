@@ -7,6 +7,7 @@ import { AddStudentComponent } from './add-student/addStudent.component';
 import { StudentBasicDetailsComponent } from './add-student/basic-details/basic-details.component';
 import { CommonModule } from '@angular/common';
 import { StudentEducationDetailsComponent } from './add-student/education-details/education-details.component';
+import { StudentService } from '../http/student.service';
 
 @NgModule({
     imports: [
@@ -20,6 +21,9 @@ import { StudentEducationDetailsComponent } from './add-student/education-detail
         StudentBasicDetailsComponent,
         StudentEducationDetailsComponent
     ],
+    providers: [
+        StudentService
+    ]
 })
 
 export class StudentModule { }
